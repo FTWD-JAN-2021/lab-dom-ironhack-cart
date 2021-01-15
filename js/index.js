@@ -57,5 +57,20 @@ document.querySelector('#create.btn').onclick = function(){
     </tr>
     `
     document.querySelector("#cart tbody").innerHTML += productRowHTML 
+    wireUpRemove();
+}
+
+function wireUpRemove(){
+
+let removeButtons = document.querySelectorAll('.btn-remove.btn')
+    for ( let i = 0; i < removeButtons.length; i++)
+    {
+        let removeButton = removeButtons[i];
+        removeButton.onclick = function(event) 
+        {
+            this.parentNode.parentNode.remove();
+        }
+    }
 
 }
+wireUpRemove()
