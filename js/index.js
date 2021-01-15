@@ -16,3 +16,14 @@ document.querySelector('#calculate').onclick = function() {
     document.querySelector('#total-value span').innerHTML = total
     console.log(total)
 }
+
+
+document.querySelector('#create.btn').onclick = function(){
+    console.log("I clicked the button")
+
+   let newProductName =  document.querySelector("#cart > tfoot > tr > td:nth-child(1) > input[type=text]").value
+
+   let newProductPrice = document.querySelector('#cart > tfoot > tr > td:nth-child(2) > input[type=number]').value
+
+   console.log(newProductName,newProductPrice)
+}
